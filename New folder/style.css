@@ -1,0 +1,264 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+::selection {
+    background-color: gray;
+    color: white;
+}
+:root {
+    --pink: hsl(322, 100%, 66%);
+    --light-pink: hsl(321, 100%, 78%);
+    --light-red: hsl(0, 100%, 63%);
+    --very-dark-cyan: hsl(192, 100%, 9%);
+    --very-pale-blue: hsl(207, 100%, 98%);
+
+}
+img {
+    max-width: 100%;
+}
+
+header,
+main,
+section {
+    padding: 0 20px;
+}
+
+main,
+section {
+    text-align: center;
+}
+h1 {
+    font-family:'Poppins', sans-serif;
+    color: var(--very-dark-cyan);
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header figure {
+    margin-left: -18px;
+    padding: 22px;
+}
+header input {
+    background-color: white;
+    color: var(--pink);
+    border: 1.5px solid var(--pink);
+    border-radius: 15px;
+    padding: 7px 20px;
+    cursor: pointer;
+    box-shadow: 0px 0px 4px -1px var(--light-pink);
+}
+main {
+    margin-top: 80px;
+}
+main > h1 {
+    font-size: 26px;
+}
+main p {
+    font-size: 15px;
+}
+main input, section input {
+    background-color: var(--pink);
+    color: white;
+    border-radius: 25px;
+    padding: 15px 58px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin: 40px 0;
+    box-shadow: 0px 1px 4px -1px black;
+    font-weight: bold;
+    font-family: 'Open Sans',sans-serif;
+}
+
+main > div {
+    margin-top: 150px;
+}
+main > div > div:nth-child(1) h1 {
+    font-size: 60px;
+    font-family: inherit;
+    position: relative;
+}
+main > div > div:nth-child(1) h1::before {
+    content: url(./images/icon-communities.svg);
+    position: absolute;
+    top: -60px;
+}
+main > div > div:nth-child(2) h1{
+    font-size: 50px;
+    margin-top: 100px;
+    font-family: inherit;
+    position: relative;
+}
+main > div > div:nth-child(2) h1::before {
+    content: url(./images/icon-messages.svg);
+    position: absolute;
+    top: -60px;
+}
+span {
+    opacity: .5;
+}
+section div p {
+    margin-bottom: 200px;
+}
+section > div:nth-child(1) {
+    margin-top: 170px;
+}
+section {
+    background-image: url(./images/bg-footer-top-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    padding-bottom: 180px;
+}
+footer {
+    background-color: var(--very-dark-cyan);
+    color: white;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+footer > div:nth-child(2) > figure:nth-child(1) {
+    filter: brightness(0) invert(1);
+    margin-left: 0px;
+    width: 200px;
+}
+footer input[type="email"] {
+    border-radius: 5px;
+    padding: 14px 143px 13px 10px;
+    border: none;
+    outline: none;
+}
+footer input[type="submit"] {
+    background-color: var(--pink);
+    color: white;
+    border-radius: 5px;
+    padding: 15px 58px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    margin: 12px 0px 50px 142px;
+}
+footer > div:nth-child(2) div:not(:last-child) {
+    display: flex;
+    align-items: center;
+    margin-left: -38px;
+}
+footer h4 {
+    margin-left: -28px;
+    font-weight: lighter;
+}
+i {
+    font-size: 27px;
+    margin: 15px 7px;
+    margin-bottom: 40px;
+    transition: .3s ease-out;
+    cursor: pointer;
+}
+i:hover {
+    color: rgb(9,199,251);
+}
+input[type="submit"],header input {
+    transition: .3s ease-out;
+}
+input[type="submit"]:hover,header input:hover {
+    opacity: .7;
+}
+@media (min-width:390px) {
+    section {
+        background-image: url(./images/bg-footer-top-desktop.svg);
+    }
+    footer input[type="submit"] {
+        margin: inherit;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+}
+@media (max-width:1440px) and (min-width: 900px) {
+    header {
+        padding: 20px 50px;
+    }
+    main > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    main > div > div:nth-child(2) h1 {
+        font-size: 60px;
+        margin-top: 41px;
+    }
+    main > h1 {
+        font-size: 40px;
+    }
+    main p {
+        padding-right: 400px;
+        padding-left: 400px;
+    }
+    section {
+        text-align: left;
+        padding-left:100px;
+        padding-right: 100px;
+        padding-bottom: 260px;
+    }
+    section h2:nth-child(4) {
+        text-align: center;
+    }
+    section form {
+        text-align: center;
+    }
+    section figure {
+        max-width: 400px;
+    }
+    section > div {
+        display: flex;
+        margin-bottom: 100px;
+    }
+    section > div:not(div:nth-child(2)),footer {
+        flex-direction: row-reverse;
+    }
+    section  h2 {
+        font-size: 28px;
+    }
+    section p {
+        padding-right: 120px;
+    }
+    section > div > div {
+        margin-top: 70px;
+    }
+    section > div:nth-child(2) > div {
+        margin-left: 120px;
+    }
+    footer {
+        display: flex;
+        padding: 0 100px;
+        padding-top: 60px;
+    }
+    footer > * {
+        flex-basis: 100%;
+    }
+    footer p {
+        padding-right: 200px;
+    }
+    footer input[type="submit"] {
+        margin-left: 25px;
+    }
+}
+@media (max-width: 1100px) {
+    main p {
+        padding-left: revert;
+        padding-right: revert
+    }
+    section p {
+        padding-right: revert;
+    }
+    section > div:nth-child(2) > div {
+        margin-left: revert;
+    }
+    footer p {
+        padding-right: revert;
+    }
+}
